@@ -1,38 +1,287 @@
-.App {
-  text-align: center;
+:root{
+    --primaryCol: #af9a7d
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    background: white;
+    color: white !important;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    box-shadow: 0px 0px 14px #00000075;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.room-size-inputs {
+    display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.room-size-inputs input {
+    max-width: 50px;
 }
-
-.App-link {
-  color: #61dafb;
+.filter-flags {
+    margin-top: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.control-div {
+    background: #ffd79e80;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+.top-padding {
+    padding: 100px 15px;
+}
+select, input {
+    margin: 0px 7px;
+    min-width: 80px;
+}
+.logo-section {
+    border: 2px solid white;
+    margin: 13px;
+    padding-right: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 12px #0000001f;
+}
+span.logo-text {
+    color: var(--primaryCol);
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.logo-icon {
+    color: var(--primaryCol);
+    font-size: 50px;
+    margin: 10px;
+}
+a.logo {
+    display: flex;
+    text-decoration: none;
+}
+.links-section{
+    margin: auto;
+    transition: .4s;
+}
+.links-section a {
+    margin: 0px 7px;
+    color: white;
+    background: #d6b07d;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 15px;
+}
+.d-flex{
+    display: flex;
+}
+span.mob-menu {
+    display: none;
+}
+.homePage {
+    background: linear-gradient(45deg, #efd7ac, #f7e3be00);
+    display: flex;
+    min-height: calc(100vh - 200px);
+    align-items: center;
+    justify-content: center;
+}
+.section-title {
+    padding: 29px;
+    text-align: center;
+    font-size: 22px;
+    text-decoration: underline;
+    color: #736552;
+}
+.roomsPage {
+    background: linear-gradient(45deg, #ffca80, #ff572200);
+    height: calc(100vh - 200px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.btn:hover {
+    background: #f99e23b3;
+    color: white;
+}
+.banner p {
+    font-size: 17px;
+    text-align: center;
+    color: #353535;
+}
+.banner h1 {
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 24px;
+    padding-top: 26px;
+}
+.extra-item {
+    margin: 7px;
+    color:#7d6a4d;
+}
+.rooms-list {
+    width: 85%;
+    margin: 50px auto;
+}
+.extras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.loading img {
+    width: 6%;
+    margin: auto;
+}
+.loading {
+    text-align: center;
+    padding: 5px;
+}
+.featuredRooms {
+    padding: 10px;
+}
+.banner {
+    width: 90%;
+    background: #d6b07d7a;
+    padding: 7px;
+    border-radius: 10px;
+    text-align: center;
+}
+.btn {
+    background: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: .4s;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--primaryCol);
+    box-shadow: 0px 0px 11px 2px #00000026;
+    display: inline-block;
+    margin-top: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.service {
+    padding: 10px;
+    text-align: center;
+    margin: 4px;
+    border: 1px solid #3c292224;
+    border-radius: 8px;
+}
+.room-info {
+    padding: 10px;
+    background: #fff6ea;
+    margin: 10px 0px;
+}
+.room-info h4 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #7b6a51;
+}
+.room-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: .2px;
+    word-spacing: 1px;
+    margin-bottom: 15px;
+    color: #7d6a4d;
+}
+.services-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+}
+.ft-rooms-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.room-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.room-images img {
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+.price-chip {
+    position: absolute;
+    top: 0;
+    background: #ffe3bc;
+    padding: 5px 15px;
+    border-radius: 0px 0px 10px 0px;
+}
+.room-link{
+    text-decoration: none;
+}
+.room-img-div img {
+    width: 100%;
+}
+.price-chip p {
+    color: black;
+    font-size: 13px;
+}
+.price-chip h6 {
+    font-size: 18px;
+    color: black;
+}
+.error-msg {
+    font-variant: all-small-caps;
+    font-size: 25px;
+    font-weight: 600;
+    color: #7f6c52;
+}
+.error-div {
+    background: linear-gradient(45deg, #d6b07d, transparent);
+    text-align: center;
+    padding: 70px 0px 54px 0px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+h5.room-name {
+    color: #94682c;
+    text-decoration: none;
+    font-variant: all-small-caps;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 7px;
+}
+.room-item {
+    margin: 15px;
+    box-shadow: 0px 0px 12px #00000042;
+    position: relative;
+}
+.services {
+    padding: 10px;
+}
+span.service-icom {
+    font-size: 40px;
+    color: #b38950;
+}
+.service h6 {
+    font-size: 17px;
+    color: #906e3f;
+    padding: 10px 0px;
+}
+.service p {
+    color: #3c2922;
+    font-size: 15px;
+}
+@media(max-width:511px) {
+    .links-section{
+        margin: 25px;
+        text-align: center;
+        display: none;
+    }
+    nav{
+        display: flow-root;
+    }
+    span.mob-menu {
+        color: var(--primaryCol);
+        margin: auto;
+        display: block;
+        font-size: 20px;
+    }
+    
+}
+@media (min-width: 512px){
+    .links-section{
+        display: block !important;
+    }
+    .room-info {
+        padding: 20px 10% !important;
+    }
 }
